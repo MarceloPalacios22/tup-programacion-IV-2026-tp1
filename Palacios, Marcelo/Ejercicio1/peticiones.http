@@ -1,0 +1,14 @@
+### Rectángulo normal
+GET http://localhost:3000/rectangulos?base=5&altura=3
+
+### Cuadrado
+GET http://localhost:3000/rectangulos?base=4&altura=4
+
+### Error: falta un parámetro
+GET http://localhost:3000/rectangulos?base=5
+
+### Error: valor no numérico
+GET http://localhost:3000/rectangulos?base=abc&altura=3
+
+### Error: valor negativo
+GET http://localhost:3000/rectangulos?base=-2&altura=3
