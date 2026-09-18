@@ -1,0 +1,45 @@
+### Listado completo
+GET http://localhost:3000/tareas
+
+### Solo pendientes
+GET http://localhost:3000/tareas?completada=false
+
+### Solo completadas
+GET http://localhost:3000/tareas?completada=true
+
+### Filtro invalido
+GET http://localhost:3000/tareas?completada=si
+
+### Detalle de una tarea
+GET http://localhost:3000/tareas/1
+
+### Detalle de tarea inexistente
+GET http://localhost:3000/tareas/99
+
+### Crear una tarea nueva
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+  "nombre": "Estudiar para el parcial"
+}
+
+### Error: nombre duplicado
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+  "nombre": "Entregar TP1"
+}
+
+### Marcar una tarea como completada
+PUT http://localhost:3000/tareas/2
+Content-Type: application/json
+
+{
+  "nombre": "Entregar TP1",
+  "completada": true
+}
+
+### Eliminar una tarea
+DELETE http://localhost:3000/tareas/1
