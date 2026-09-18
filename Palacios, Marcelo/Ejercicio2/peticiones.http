@@ -1,0 +1,47 @@
+### Listado completo
+GET http://localhost:3000/alumnos
+
+### Detalle de un alumno
+GET http://localhost:3000/alumnos/1
+
+### Detalle de un alumno inexistente (404)
+GET http://localhost:3000/alumnos/99
+
+### Crear un alumno valido
+POST http://localhost:3000/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Lucas Aguero",
+  "notas": [6, 7, 7]
+}
+
+### Error: nombre duplicado
+POST http://localhost:3000/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Ana Gómez",
+  "notas": [7, 7, 7]
+}
+
+### Error: notas invalidas
+POST http://localhost:3000/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Pedro Ruiz",
+  "notas": [7, 12, 5]
+}
+
+### Modificar un alumno existente
+PUT http://localhost:3000/alumnos/2
+Content-Type: application/json
+
+{
+  "nombre": "Jose Ruiz",
+  "notas": [7, 7, 8]
+}
+
+### Eliminar un alumno
+DELETE http://localhost:3000/alumnos/2

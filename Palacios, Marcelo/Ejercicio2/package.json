@@ -1,0 +1,15 @@
+{
+  "name": "ejercicio2",
+  "version": "1.0.0",
+  "description": "Ejercicio2 Api Alumnos",
+  "license": "ISC",
+  "author": "Palacios Marcelo Benjamin",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
